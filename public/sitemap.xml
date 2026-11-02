@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://www.intellexajournal.com/politics</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -352,6 +352,16 @@
     <image:image>
       <image:loc>https://www.intellexajournal.com/images/news/us-jobs-report-august-payroll-growth-fed-rate-outlook-image.webp</image:loc>
       <image:title>August Payrolls Surge Past Forecasts, Keeping Fed Rate Hike Alive</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.intellexajournal.com/politics/the-vanity-of-alina-habba-mildon</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.intellexajournal.com/images/news/the-vanity-of-alina-habba-mildon-image.webp</image:loc>
+      <image:title>The Vanity of Alina Habba Mildon</image:title>
     </image:image>
   </url>
   <url>

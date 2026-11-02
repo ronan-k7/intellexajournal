@@ -6,7 +6,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Newsletter from '@/components/home/Newsletter';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { CLIENT_ARTICLE_SLUG, CLIENT_ARTICLE_CATEGORY } from '@/lib/client-article';
+import { CLIENT_ARTICLE_SLUG, CLIENT_ARTICLE_CATEGORY, VANITY_ARTICLE_SLUG, VANITY_ARTICLE_CATEGORY } from '@/lib/client-article';
 import { buildMetadata } from '@/lib/seo';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
 import { articles, getCategoryArticles } from '@/lib/data';
@@ -62,8 +62,10 @@ export default async function CategoryPage({ params }) {
   const items = getCategoryArticles(category);
   if (!categoryNames[category] || !items.length) notFound();
 
-  // The client story is pinned as the lead of its own category (static, never displaced).
-  const pinned = category === CLIENT_ARTICLE_CATEGORY ? items.find((a) => a.slug === CLIENT_ARTICLE_SLUG) : null;
+  // The client stories are pinned as the lead of their own category (static, never displaced).
+  const pinnedSlugs = { [CLIENT_ARTICLE_CATEGORY]: CLIENT_ARTICLE_SLUG, [VANITY_ARTICLE_CATEGORY]: VANITY_ARTICLE_SLUG };
+  const pinnedSlug = pinnedSlugs[category];
+  const pinned = pinnedSlug ? items.find((a) => a.slug === pinnedSlug) : null;
   const ordered = pinned ? [pinned, ...items.filter((a) => a.slug !== pinned.slug)] : items;
   const [lead, ...rest] = ordered;
   const alsoIn = rest.slice(0, 4);

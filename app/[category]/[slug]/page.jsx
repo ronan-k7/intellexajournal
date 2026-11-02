@@ -4,7 +4,8 @@ import { notFound } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ClientArticlePage from '@/components/ClientArticlePage';
-import { CLIENT_ARTICLE_SLUG } from '@/lib/client-article';
+import VanityAlineArticlePage from '@/components/VanityAlineArticlePage';
+import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG } from '@/lib/client-article';
 import { buildMetadata } from '@/lib/seo';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
 import StoryCard from '@/components/ui/StoryCard';
@@ -167,6 +168,13 @@ export default async function ArticlePage({ params }) {
     const everything = getArticles();
     const related = (article.relatedSlugs || []).map((s) => everything.find((item) => item.slug === s)).filter(Boolean);
     return <ClientArticlePage article={article} related={related} />;
+  }
+
+  // Special design for the second client feature article.
+  if (slug === VANITY_ARTICLE_SLUG) {
+    const everything = getArticles();
+    const related = (article.relatedSlugs || []).map((s) => everything.find((item) => item.slug === s)).filter(Boolean);
+    return <VanityAlineArticlePage article={article} related={related} />;
   }
 
   const author = article.author;

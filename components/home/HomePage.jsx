@@ -1,5 +1,5 @@
 import Featured from './Featured';
-import { CLIENT_ARTICLE_SLUG } from '@/lib/client-article';
+import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG } from '@/lib/client-article';
 import LatestVideo from './LatestVideo';
 import LeadNews from './LeadNews';
 import Newsletter from './Newsletter';
@@ -30,7 +30,10 @@ export default function HomePage({ articles }) {
   // Hero slot is pinned to the client story (falls back to the newest article).
   const hero = articles.find((a) => a.slug === CLIENT_ARTICLE_SLUG) || articles[0];
   used.add(hero.slug);
-  const lead = take(articles, 10);
+  // Second client story is pinned to the 2nd slot of the left column in LeadNews.
+  const secondary = articles.find((a) => a.slug === VANITY_ARTICLE_SLUG) || null;
+  if (secondary) used.add(secondary.slug);
+  const lead = take(articles, secondary ? 9 : 10);
   const video = take(articles.filter((a) => a.video), 4);
   const featured = take(articles.filter((a) => a.featured), 4);
   const world = take(byCategory('world'), 6);
@@ -49,7 +52,7 @@ export default function HomePage({ articles }) {
         <a href="#latest" className="mr-3.5 hidden text-[11px] font-bold sm:inline" style={{ color: ACCENT }}>Follow updates →</a>
       </div> */}
 
-      <LeadNews hero={hero} articles={lead} />
+      <LeadNews hero={hero} secondary={secondary} articles={lead} />
       <LatestVideo articles={video} />
 
       <QuoteBanner />
