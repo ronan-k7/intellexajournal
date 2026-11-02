@@ -1,16 +1,15 @@
-import Image from 'next/image';
 import Featured from './Featured';
 import { CLIENT_ARTICLE_SLUG } from '@/lib/client-article';
 import LatestVideo from './LatestVideo';
 import LeadNews from './LeadNews';
 import Newsletter from './Newsletter';
-import OpinionStrip from './OpinionStrip';
+import QuoteBanner from '@/components/ui/QuoteBanner';
 import Sponsored from './Sponsored';
 import TopicSection from './TopicSection';
 
 const ACCENT = '#a30d32';
 
-export default function HomePage({ articles, authors }) {
+export default function HomePage({ articles }) {
   const byCategory = (category) => articles.filter((article) => article.category === category);
 
   // Every story appears ONCE on the home page. Each section "takes" the stories
@@ -53,28 +52,9 @@ export default function HomePage({ articles, authors }) {
       <LeadNews hero={hero} articles={lead} />
       <LatestVideo articles={video} />
 
-      {/* <div className="my-6 grid h-[80px] place-items-start justify-center pt-3 text-center text-[8px] uppercase tracking-[0.12em] text-[#aaa] sm:h-[145px]" aria-label="Advertisement space">
-        <span>Advertisement</span>
-      </div> */}
-       <div className="my-8 flex justify-center">
-                <div className="relative w-full max-w-[728px]">
-                  <span className="absolute left-2 top-2 z-10 bg-white/90 px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-[0.12em] text-[#999]">
-                    Advertisement
-                  </span>
-                  <div className="relative h-[120px] w-full overflow-hidden border border-[#e2e2df] bg-[#f2f2ef] sm:h-[90px]">
-                    <Image
-                      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=60"
-                      alt="Advertisement"
-                      fill
-                      sizes="728px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
+      <QuoteBanner />
 
       <TopicSection title="Latest" tone="black" articles={latest} />
-      <OpinionStrip authors={authors} />
       <TopicSection title="World" slug="world" tone="blue" articles={world} layout="split" />
       <Featured articles={featured} />
       <TopicSection title="Politics" slug="politics" tone="red" articles={politics} />

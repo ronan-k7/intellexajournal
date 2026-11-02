@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import QuoteBanner from '@/components/ui/QuoteBanner';
 import StoryCard from '@/components/ui/StoryCard';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Newsletter from '@/components/home/Newsletter';
@@ -120,23 +120,7 @@ export default async function CategoryPage({ params }) {
           </div>
         </section>
 
-        {/* Dummy ad slot */}
-        <div className="my-8 flex justify-center">
-          <div className="relative w-full max-w-[728px]">
-            <span className="absolute left-2 top-2 z-10 bg-white/90 px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-[0.12em] text-[#999]">
-              Advertisement
-            </span>
-            <div className="relative h-[120px] w-full overflow-hidden border border-[#e2e2df] bg-[#f2f2ef] sm:h-[90px]">
-              <Image
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=60"
-                alt="Advertisement"
-                fill
-                sizes="728px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
+        <QuoteBanner />
 
         {/* Full index of the section */}
         <section id="more-stories" className="mt-2 scroll-mt-6">

@@ -9,11 +9,11 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from 'react-icons/fa6';
-import { getArticles, formatDate } from '@/lib/data';
+import { getArticles } from '@/lib/data';
 
 const ACCENT = '#a30d32';
 
-// ── Reusable data ─────────────────────────────────────────────────────
+// ── Footer link groups ────────────────────────────────────────────────
 
 const footerLinkGroups = [
   {
@@ -95,7 +95,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#070707] text-white">
 
-      {/* 1. Newsletter banner */}
+      {/* 1. Newsletter Banner */}
 
       <div className="bg-white text-[#101010]">
         <div className="mx-auto flex max-w-[1200px] flex-col gap-6 px-5 py-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:py-10">
@@ -147,25 +147,15 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 2. Main footer */}
+      {/* 2. Main Footer */}
 
       <div className="mx-auto max-w-[1200px] px-5 py-10">
 
-        {/*
-          Mobile:
-          Row 1: Brand (full width)
-          Row 2: Sections | Quick Links
-          Row 3: Policies | Latest Updates
-
-          Desktop:
-          Original five-column layout.
-        */}
-
-        <div className="grid grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-5 lg:gap-6">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-6">
 
           {/* Column 1: Brand */}
 
-          <div className="col-span-2 lg:col-span-1">
+          <div className="lg:col-span-1">
 
             <Link
               href="/"
@@ -187,6 +177,7 @@ export default function Footer() {
             </p>
 
             <div className="mt-4 flex gap-2">
+
               {socialLinks.map(({ name, href, Icon }) => (
                 <a
                   key={name}
@@ -197,58 +188,47 @@ export default function Footer() {
                   <Icon className="h-3.5 w-3.5" />
                 </a>
               ))}
-            </div>
 
+            </div>
           </div>
 
-          {/* Columns 2-4: Sections, Quick Links, Policies */}
+          {/* Columns 2-4: Footer Links */}
 
-          {footerLinkGroups.map(({ heading, links }) => {
+          {footerLinkGroups.map(({ heading, links }) => (
+            <div
+              key={heading}
+              className="group/col min-w-0 lg:col-span-1"
+            >
 
-            const mobilePosition =
-              heading === 'Sections'
-                ? 'col-start-1 row-start-2'
-                : heading === 'Quick Links'
-                  ? 'col-start-2 row-start-2'
-                  : 'col-start-1 row-start-3';
+              <h3 className="text-[11px] font-bold uppercase tracking-[0.08em]">
+                {heading}
+              </h3>
 
-            return (
-              <div
-                key={heading}
-                className={`group/col min-w-0 ${mobilePosition} lg:col-start-auto lg:row-start-auto`}
-              >
+              <span
+                className="mt-2 block h-[2px] w-6 transition-all duration-300 group-hover/col:w-10"
+                style={{ background: ACCENT }}
+              />
 
-                <h3 className="text-[11px] font-bold uppercase tracking-[0.08em]">
-                  {heading}
-                </h3>
+              <ul className="mt-4 grid grid-cols-4 gap-x-2 gap-y-3 lg:block lg:space-y-2">
 
-                <span
-                  className="mt-2 block h-[2px] w-6 transition-all duration-300 group-hover/col:w-10"
-                  style={{ background: ACCENT }}
-                />
+                {links.map(({ label, href }) => (
+                  <li key={label} className="min-w-0">
+                    <Link
+                      href={href}
+                      className="inline-block text-[11px] leading-snug text-[#aaa] underline decoration-transparent underline-offset-4 transition-colors duration-200 hover:text-[#a30d32] hover:decoration-[#a30d32] lg:text-[13px]"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
 
-                <ul className="mt-3 space-y-2">
-
-                  {links.map(({ label, href }) => (
-                    <li key={label}>
-                      <Link
-                        href={href}
-                        className="inline-block text-[13px] text-[#aaa] underline decoration-transparent underline-offset-4 transition-colors duration-200 hover:text-[#a30d32] hover:decoration-[#a30d32]"
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-
-                </ul>
-
-              </div>
-            );
-          })}
+              </ul>
+            </div>
+          ))}
 
           {/* Column 5: Latest Updates */}
 
-          <div className="col-start-2 row-start-3 min-w-0 lg:col-start-auto lg:row-start-auto">
+          <div className="min-w-0 lg:col-span-1">
 
             <h3 className="text-[11px] font-bold uppercase tracking-[0.08em]">
               Latest Updates
@@ -259,17 +239,17 @@ export default function Footer() {
               style={{ background: ACCENT }}
             />
 
-            <ul className="mt-3 space-y-3">
+            <ul className="mt-4 space-y-3">
 
               {latestArticles.map((article) => (
                 <li key={article.slug}>
 
                   <Link
                     href={`/${article.category}/${article.slug}`}
-                    className="group flex gap-2 lg:gap-3"
+                    className="group flex items-start gap-3"
                   >
 
-                    <span className="relative block h-12 w-14 shrink-0 overflow-hidden bg-[#1a1a1a] sm:w-16">
+                    <span className="relative block h-12 w-16 shrink-0 overflow-hidden bg-[#1a1a1a]">
 
                       <Image
                         src={article.image}
@@ -284,13 +264,13 @@ export default function Footer() {
                     <span className="min-w-0">
 
                       <span
-                        className="block text-[9px] font-bold uppercase tracking-[0.04em] lg:text-[10px]"
+                        className="block text-[10px] font-bold uppercase tracking-[0.06em]"
                         style={{ color: ACCENT }}
                       >
                         {article.categoryLabel}
                       </span>
 
-                      <span className="mt-0.5 block text-[10px] leading-snug text-[#eee] transition-colors duration-200 group-hover:text-[#a30d32] lg:text-[11px]">
+                      <span className="mt-0.5 block text-[11px] leading-snug text-[#eee] transition-colors duration-200 group-hover:text-[#a30d32]">
                         {article.title}
                       </span>
 
@@ -302,13 +282,12 @@ export default function Footer() {
               ))}
 
             </ul>
-
           </div>
 
         </div>
       </div>
 
-      {/* 3. Editorial highlights row */}
+      {/* 3. Editorial Highlights */}
 
       <div className="border-t border-[#333]">
 
@@ -343,7 +322,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 4. Bottom copyright bar */}
+      {/* 4. Bottom Copyright Bar */}
 
       <div className="border-t border-[#333]">
 
@@ -362,7 +341,10 @@ export default function Footer() {
             className="flex items-center gap-1 text-[#aaa] transition-colors hover:text-white"
           >
             Back to top
-            <ArrowUp className="h-3.5 w-3.5" style={{ color: ACCENT }} />
+            <ArrowUp
+              className="h-3.5 w-3.5"
+              style={{ color: ACCENT }}
+            />
           </a>
 
         </div>

@@ -201,6 +201,46 @@ function renderBlock(block, index, isFirstParagraph) {
       );
     }
 
+    case 'figure': {
+      if (block.enabled === false) return null;
+
+      const narrow = block.size === 'portrait';
+
+      return (
+        <figure
+          key={index}
+          className={`my-7 overflow-hidden border border-[#e6e2dc] bg-[#f7f5f2] ${
+            narrow ? 'mx-auto max-w-[520px]' : 'w-full'
+          }`}
+        >
+          <Image
+            src={block.image}
+            alt={block.alt || block.caption || ''}
+            width={block.width}
+            height={block.height}
+            sizes={narrow ? '(min-width: 1024px) 520px, 100vw' : '(min-width: 1024px) 780px, 100vw'}
+            className="block h-auto w-full"
+          />
+
+          {(block.caption || block.credit) && (
+            <figcaption className="border-t border-[#e6e2dc] px-4 py-3 text-center">
+              {block.caption && (
+                <span className="block font-serif text-[13px] font-semibold leading-[1.4] text-[#333]">
+                  {block.caption}
+                </span>
+              )}
+
+              {block.credit && (
+                <span className="mt-1 block text-[10.5px] uppercase tracking-[0.06em] text-[#888]">
+                  {block.credit}
+                </span>
+              )}
+            </figcaption>
+          )}
+        </figure>
+      );
+    }
+
     default:
       return null;
   }

@@ -1,6 +1,6 @@
 import HomePage from '@/components/home/HomePage';
 import JsonLd from '@/components/JsonLd';
-import { authors, getArticles } from '@/lib/data';
+import { getArticles } from '@/lib/data';
 import { SITE_NAME, SITE_DESCRIPTION, absoluteUrl } from '@/lib/site';
 import { buildMetadata } from '@/lib/seo';
 
@@ -35,7 +35,7 @@ export default function Page() {
           },
         }}
       />
-      <HomePage articles={articles} authors={authors} />
+      <HomePage articles={articles} />
     </>
   );
 }

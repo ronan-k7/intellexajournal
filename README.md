@@ -21,7 +21,6 @@ npm start
 ## Content model
 
 - `public/data/articles.json` contains every article, including body sections and key takeaways.
-- `public/data/authors.json` contains author profiles.
 - The `json` directory intentionally contains only those two requested files.
 - Articles automatically appear newest-first on the homepage.
 
@@ -30,7 +29,6 @@ npm start
 - `/` — homepage
 - `/[category]` — category page, for example `/sport`
 - `/[category]/[slug]` — article detail page
-- `/author/[slug]` — author profile
 
 ## Important project structure
 
@@ -50,7 +48,6 @@ components/
     LatestVideo.jsx
     LeadNews.jsx
     Newsletter.jsx
-    OpinionStrip.jsx
     Sponsored.jsx
     TopicSection.jsx
   ui/

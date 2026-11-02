@@ -1,46 +1,16 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import StaticPage, { staticMetadata } from '@/components/StaticPage';
-import { authors, getCategoryLabel } from '@/lib/data';
-import { absoluteUrl } from '@/lib/site';
+import { STAFF } from '@/lib/data';
 
 export const metadata = staticMetadata('/team');
 
 export default function Page() {
   return (
-    <StaticPage
-      path="/team"
-      wide
-      jsonLd={{
-        mainEntity: {
-          '@type': 'ItemList',
-          itemListElement: authors.map((a, i) => ({
-            '@type': 'ListItem',
-            position: i + 1,
-            item: {
-              '@type': 'Person',
-              name: a.name,
-              url: absoluteUrl(`/author/${a.slug}`),
-              image: a.profileImage,
-              jobTitle: `${getCategoryLabel(a.category)} reporter`,
-              worksFor: { '@id': `${absoluteUrl('/')}#organization` },
-            },
-          })),
-        },
-      }}
-    >
-      <ul className="m-0 grid list-none grid-cols-1 gap-6 p-0 sm:grid-cols-2 lg:grid-cols-4">
-        {authors.map((a) => (
-          <li key={a.slug} className="border-t-2 border-[#111] pt-4">
-            <Link href={`/author/${a.slug}`} className="group block">
-              <Image src={a.profileImage} alt={a.name} width={96} height={96} className="h-24 w-24 rounded-full grayscale-[20%]" />
-              <span className="mt-3 block text-[10px] font-extrabold uppercase tracking-[0.08em] text-[#a30d32]">{getCategoryLabel(a.category)} desk</span>
-              <strong className="block font-serif text-[20px] leading-tight group-hover:underline">{a.name}</strong>
-              <p className="mt-1 line-clamp-4 font-serif text-[14px] leading-[1.5] text-[#555]">{a.bio}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <StaticPage path="/team" wide>
+      <div className="border-t-2 border-[#111] pt-4">
+        <span className="grid h-24 w-24 place-items-center rounded-full bg-[#111] font-serif text-[32px] font-bold text-white" aria-hidden="true">{STAFF.initials}</span>
+        <strong className="mt-3 block font-serif text-[20px] leading-tight">{STAFF.name}</strong>
+        <p className="mt-1 max-w-[620px] font-serif text-[14px] leading-[1.5] text-[#555]">{STAFF.bio}</p>
+      </div>
     </StaticPage>
   );
 }

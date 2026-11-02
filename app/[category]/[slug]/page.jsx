@@ -9,7 +9,6 @@ import { buildMetadata } from '@/lib/seo';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
 import StoryCard from '@/components/ui/StoryCard';
 import SectionHeading from '@/components/ui/SectionHeading';
-import AuthorCard from '@/components/ui/AuthorCard';
 import { articles, getArticle, getArticles, getCategoryArticles, formatDate, isoDate } from '@/lib/data';
 
 const ACCENT = '#a30d32';
@@ -202,7 +201,7 @@ export default async function ArticlePage({ params }) {
         inLanguage: 'en-US',
         isAccessibleForFree: true,
         author: author
-          ? { '@type': 'Person', name: author.name, url: absoluteUrl(`/author/${author.slug}`) }
+          ? { '@type': 'Organization', name: author.name, url: absoluteUrl('/') }
           : { '@type': 'Organization', name: SITE_NAME },
         publisher: {
           '@type': 'NewsMediaOrganization',
@@ -247,7 +246,7 @@ export default async function ArticlePage({ params }) {
                 <>
                   <span aria-hidden="true">·</span>
                   <span>
-                    By <Link href={`/author/${author.slug}`} className="font-bold text-[#111]">{author.name}</Link>
+                    By <strong className="font-bold text-[#111]">{author.name}</strong>
                   </span>
                 </>
               )}
@@ -272,7 +271,7 @@ export default async function ArticlePage({ params }) {
         </div>
       </header>
 
-      {/* Sidebar (journalist profile + popular) + main content */}
+      {/* Sidebar (newsroom + popular) + main content */}
       <div className="mx-auto flex max-w-[1120px] w-[min(1120px,calc(100%-40px))] flex-col-reverse gap-8 border-t border-[#eee] pb-14 pt-8 lg:flex-row">
         <aside className="lg:w-[260px] lg:shrink-0">
           {/* Wrapping author card + popular list in a single sticky block
@@ -280,7 +279,16 @@ export default async function ArticlePage({ params }) {
               them moving together, so the popular list can never scroll up
               and overlap the pinned author card. */}
           <div className="flex flex-col gap-5 lg:sticky lg:top-6">
-            {author && <AuthorCard author={author} variant="mini" />}
+            {author && (
+              <div className="rounded-md border border-[#e2e2df] bg-[#f7f7f5] p-3.5 shadow-sm">
+                <span className="text-[9px] font-extrabold uppercase tracking-[0.08em]" style={{ color: ACCENT }}>Newsroom</span>
+                <div className="mt-1.5 flex items-center gap-2.5">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#111] font-serif text-[14px] font-bold text-white" aria-hidden="true">{author.initials}</span>
+                  <strong className="block font-serif text-[15px] leading-tight">{author.name}</strong>
+                </div>
+                <p className="mt-2 line-clamp-4 font-serif text-[12.5px] leading-[1.45] text-[#555]">{author.bio}</p>
+              </div>
+            )}
 
             <div className="border-t-2 border-[#111] pt-3">
               <span className="mb-2 inline-block bg-[#111] px-2 text-[11px] font-extrabold uppercase text-white">Popular</span>

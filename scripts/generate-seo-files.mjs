@@ -9,7 +9,6 @@ const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://www.intellexajournal.com';
 
 const articlesData = JSON.parse(readFileSync(path.join(root, 'public/data/articles.json'), 'utf8'));
-const authorsData = JSON.parse(readFileSync(path.join(root, 'public/data/authors.json'), 'utf8'));
 
 const slugify = (v) =>
   String(v).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()
@@ -42,10 +41,6 @@ const pages = [
     priority: p.startsWith('/policies/') ? '0.3' : '0.5',
   })),
   ...urls,
-  ...authorsData.categories.map((c) => ({
-    loc: `${SITE_URL}/author/${c.author.slug || slugify(c.author.name)}`,
-    lastmod: latest[c.category] || newest, changefreq: 'weekly', priority: '0.5',
-  })),
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
