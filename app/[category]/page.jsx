@@ -49,13 +49,11 @@ export function generateStaticParams() { return Object.keys(categoryNames).map((
 export async function generateMetadata({ params }) {
   const { category } = await params;
   if (!categoryNames[category]) return {};
-  const first = getCategoryArticles(category)[0];
   return buildMetadata({
     title: `${categoryNames[category]} News`,
     description: categoryIntros[category],
     path: `/${category}`,
-    image: first?.image,
-    imageAlt: first?.imageAlt,
+    // No `image` → falls back to the default Intellexa Journal brand image.
   });
 }
 

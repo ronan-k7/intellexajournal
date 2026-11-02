@@ -74,4 +74,4 @@ The project includes route metadata, Open Graph data, NewsArticle structured dat
 - `components/Breadcrumbs.jsx` — visible breadcrumbs + `BreadcrumbList` JSON-LD.
 - Sitewide JSON-LD: `NewsMediaOrganization` + `WebSite` (layout). Per page: `CollectionPage` (home/category), `NewsArticle` (article), `ProfilePage` (author).
 - `public/robots.txt` and `public/sitemap.xml` are generated from the JSON data by `npm run seo` and automatically before every `npm run build`.
-- Default social image: `public/og-default.png` (1200x630). Publisher logo: `public/logo.png`.
+- Default social image (home, categories, static/policy pages): `public/og-default.png` (1200x630). Favicon: `app/favicon.ico` + `app/apple-icon.png`. Articles use their own image; author pages use the author photo. Publisher logo: `public/logo.png`.
