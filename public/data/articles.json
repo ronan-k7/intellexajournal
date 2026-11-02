@@ -855,6 +855,22 @@
           "text": "And perhaps that is the most important lesson of the controversy surrounding Alina Habba Mildon: power can be acquired in a moment, but trust takes generations to build."
         }
       ],
+       "factCard": {
+        "title": "By the Numbers",
+        "stats": [
+          {
+            "icon": "scale",
+            "value": "20+",
+            "label": "Law firms"
+          },
+          {
+            "icon": "landmark",
+            "value": "$100M",
+            "label": "Yearly legal and advisory spending"
+          }
+        ],
+        "text": "Habba’s responsibilities included coordinating more than 20 law firms and overseeing approximately $100 million in annual legal and advisory expenditure. If accurate, that description would place her at the center of a substantial operation requiring sustained coordination, oversight and reporting."
+      },
       "sources": [
         {
           "title": "Trump Calls Former Lawyer Alina Habba's $50M Deal 'Not Acceptable'",

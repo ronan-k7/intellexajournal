@@ -1,7 +1,6 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { Briefcase, CalendarDays, Handshake, Mail, Scale, Users } from 'lucide-react';
+import { Briefcase, CalendarDays, Handshake, Landmark, Mail, Scale, Users } from 'lucide-react';
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaQuoteLeft } from 'react-icons/fa6';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -53,6 +52,7 @@ const ICONS = {
   calendar: CalendarDays,
   people: Users,
   rings: RingsIcon,
+  landmark: Landmark,
 };
 
 function Avatar({ initials, size = 'h-8 w-8 text-[12px]' }) {
@@ -136,6 +136,74 @@ function ShareRow({ article, url }) {
 
       <CopyLinkButton url={url} className={btn} />
     </div>
+  );
+}
+
+// Light gray fact card shown before the sources list
+function FactCard({ card }) {
+  if (!card || (!card.stats?.length && !card.text)) return null;
+
+  return (
+    <section
+      className="mt-8 border border-[#e2dfda] bg-[#f1f1ef] shadow-[0_2px_10px_rgba(0,0,0,0.05)]"
+      style={{ borderTop: `4px solid ${RED}` }}
+      aria-label="Key figures"
+    >
+      <div className="px-5 py-5 sm:px-6">
+        {/* Stats */}
+        {card.stats?.length > 0 && (
+          <div className="grid grid-cols-1 divide-y divide-[#e2dfda] border border-[#e2dfda] sm:grid-cols-2 sm:divide-x sm:divide-y-0">
+            {card.stats.map((stat) => {
+              const Icon = ICONS[stat.icon] || Scale;
+
+              return (
+                <div
+                  key={stat.label}
+                  className="flex items-center gap-4 bg-white px-5 py-4"
+                >
+                  <span
+                    className="grid h-12 w-12 shrink-0 place-items-center rounded-full border"
+                    style={{ borderColor: '#f0c4c7', background: '#fff' }}
+                    aria-hidden="true"
+                  >
+                    <Icon
+                      className="h-6 w-6"
+                      strokeWidth={1.6}
+                      style={{ color: RED }}
+                    />
+                  </span>
+
+                  <div className="min-w-0">
+                    <strong
+                      className="block font-serif text-[34px] font-extrabold leading-none"
+                      style={{ color: RED }}
+                    >
+                      {stat.value}
+                    </strong>
+
+                    <span className="mt-1.5 block text-[11px] font-bold uppercase leading-[1.3] tracking-[0.06em] text-[#333]">
+                      {stat.label}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Description */}
+        {card.text && (
+          <p
+            className={`mb-0 border-l-[3px] pl-4 font-serif text-[15px] italic leading-[1.55] text-[#444] ${
+              card.stats?.length > 0 ? 'mt-5' : ''
+            }`}
+            style={{ borderLeftColor: RED }}
+          >
+            {card.text}
+          </p>
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -474,6 +542,9 @@ export default function ClientArticlePage({ article, related = [] }) {
             {content.map((block, i) =>
               renderBlock(block, i, i === firstParagraph)
             )}
+
+            {/* Fact Card (before Sources) */}
+            <FactCard card={article.factCard} />
 
             {/* Sources & References */}
             {article.sources?.length > 0 && (
