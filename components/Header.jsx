@@ -126,7 +126,7 @@ export default function Header() {
   return (
     <>
       <header className="relative z-50 bg-white">
-        <div className="mx-auto grid h-[77px] sm:h-[114px] w-[min(1120px,calc(100%-20px))] sm:w-[min(1120px,calc(100%-40px))] grid-cols-[42px_1fr_42px] sm:grid-cols-[1fr_auto_1fr] items-center border-b border-[#ddd]">
+        <div className="mx-auto grid h-[77px] sm:h-[114px] w-[min(1120px,calc(100%-20px))] sm:w-[min(1120px,calc(100%-40px))] grid-cols-[44px_1fr_44px] sm:grid-cols-[1fr_auto_1fr] items-center border-b border-[#ddd]">
             <div className="flex items-center gap-2 sm:gap-3">
               <button
                 className="flex items-center gap-2 border-0 bg-transparent p-0 sm:p-1.5 pl-0 cursor-pointer text-[#111]"
@@ -134,15 +134,15 @@ export default function Header() {
                 aria-label="Open menu"
                 aria-expanded={open}
               >
-                <span className="grid w-4 gap-[3px]" aria-hidden="true">
-                  <i className="block h-px bg-[#111]" />
-                  <i className="block h-px bg-[#111]" />
-                  <i className="block h-px bg-[#111]" />
+                <span className="grid w-5 gap-[4px] sm:w-4 sm:gap-[3px]" aria-hidden="true">
+                  <i className="block h-[2px] bg-[#111] sm:h-px" />
+                  <i className="block h-[2px] bg-[#111] sm:h-px" />
+                  <i className="block h-[2px] bg-[#111] sm:h-px" />
                 </span>
                 <span className="hidden sm:inline text-[12px] uppercase tracking-[0.1em]">Menu</span>
               </button>
               <button
-                className="grid place-items-center border-0 bg-transparent p-1.5 cursor-pointer text-[23px] leading-none text-[#111] hover:text-[#a30d32]"
+                className="hidden sm:grid place-items-center border-0 bg-transparent p-1.5 cursor-pointer text-[23px] leading-none text-[#111] hover:text-[#a30d32]"
                 onClick={() => setSearchOpen((value) => !value)}
                 aria-label="Toggle search"
                 aria-expanded={searchOpen}
@@ -164,6 +164,12 @@ export default function Header() {
             </Link>
 
             <div className="flex items-center justify-end gap-0 sm:gap-7">
+              <button
+                className="grid place-items-center border-0 bg-transparent p-0 cursor-pointer text-[27px] leading-none text-[#111] hover:text-[#a30d32] sm:hidden"
+                onClick={() => setSearchOpen((value) => !value)}
+                aria-label="Toggle search"
+                aria-expanded={searchOpen}
+              >⌕</button>
               <span className="hidden lg:block text-right text-[12px] font-serif italic text-[#555]">
                 {today}
               </span>
