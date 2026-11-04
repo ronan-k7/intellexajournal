@@ -61,7 +61,7 @@ const footerLinkGroups = [
 const socialLinks = [
   { name: 'Facebook', href: '#', Icon: FaFacebookF },
   { name: 'X', href: '#', Icon: FaXTwitter },
-  { name: 'Instagram', href: '#', Icon: FaInstagram },
+  { name: 'Instagram', href: 'https://www.instagram.com/intellexa_journal/', Icon: FaInstagram },
   { name: 'LinkedIn', href: '#', Icon: FaLinkedinIn },
   { name: 'YouTube', href: '#', Icon: FaYoutube },
 ];

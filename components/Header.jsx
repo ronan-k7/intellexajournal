@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa6';
+import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa6';
 import { categoryList, articles } from '@/lib/data';
 
 const ACCENT = '#a30d32';
@@ -117,10 +117,12 @@ export default function Header() {
   };
 
   const socialIcons = [
+    { name: 'Instagram', href: 'https://www.instagram.com/intellexa_journal/', Icon: FaInstagram },
     { label: 'Facebook', Icon: FaFacebookF, href: '#' },
     { label: 'X / Twitter', Icon: FaXTwitter, href: '#' },
     { label: 'LinkedIn', Icon: FaLinkedinIn, href: '#' },
     { label: 'YouTube', Icon: FaYoutube, href: '#' },
+    
   ];
 
   return (
