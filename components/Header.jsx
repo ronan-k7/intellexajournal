@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa6';
+import { FaXTwitter, FaInstagram, FaRedditAlien } from 'react-icons/fa6';
+import { SiMedium, SiSubstack } from 'react-icons/si';
 import { categoryList, articles } from '@/lib/data';
 
 const ACCENT = '#a30d32';
@@ -17,6 +18,19 @@ const ALL_ARTICLES = articles.map((article) => ({
   categoryLabel: article.categoryLabel,
   excerpt: article.excerpt || ''
 }));
+
+// ── Social links ──────────────────────────────────────────────────────────
+const SOCIAL_ICONS = [
+  { label: 'Instagram', href: 'https://www.instagram.com/intellexa_journal/', Icon: FaInstagram },
+  { label: 'X / Twitter', href: '#', Icon: FaXTwitter },
+  { label: 'Reddit', href: 'https://www.reddit.com/user/Intellexa_Journal/', Icon: FaRedditAlien },
+  { label: 'Medium', href: 'https://medium.com/@intellexajournal', Icon: SiMedium },
+  { label: 'Substack', href: 'https://substack.com/@intellexajournal', Icon: SiSubstack },
+];
+
+// Only open real links in a new tab; "#" placeholders stay in the same tab.
+const linkProps = (href) =>
+  href && href !== '#' ? { target: '_blank', rel: 'noopener noreferrer' } : {};
 
 // Wrap the portion(s) of `text` that match `query` in <mark> for highlighting.
 function highlightMatch(text, query) {
@@ -116,15 +130,6 @@ export default function Header() {
     router.push(`/${category}/${slug}`);
   };
 
-  const socialIcons = [
-    { name: 'Instagram', href: 'https://www.instagram.com/intellexa_journal/', Icon: FaInstagram },
-    { label: 'Facebook', Icon: FaFacebookF, href: '#' },
-    { label: 'X / Twitter', Icon: FaXTwitter, href: '#' },
-    { label: 'LinkedIn', Icon: FaLinkedinIn, href: '#' },
-    { label: 'YouTube', Icon: FaYoutube, href: '#' },
-    
-  ];
-
   return (
     <>
       <header className="relative z-50 bg-white">
@@ -150,8 +155,14 @@ export default function Header() {
                 aria-expanded={searchOpen}
               >⌕</button>
               <div className="hidden md:flex ml-3 gap-1" aria-label="Social media">
-                {socialIcons.map(({ label, Icon, href }) => (
-                  <a key={label} href={href} aria-label={label} className="grid h-[25px] w-[25px] place-items-center border border-[#aaa] text-[11px] text-[#111] hover:border-[#a30d32] hover:text-[#a30d32]">
+                {SOCIAL_ICONS.map(({ label, Icon, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    {...linkProps(href)}
+                    className="grid h-[25px] w-[25px] place-items-center border border-[#aaa] text-[11px] text-[#111] hover:border-[#a30d32] hover:text-[#a30d32]"
+                  >
                     <Icon aria-hidden="true" />
                   </a>
                 ))}
@@ -298,8 +309,14 @@ export default function Header() {
 
         <div className="flex shrink-0 flex-col gap-3 border-t border-[#333] pt-4">
           <div className="flex gap-2" aria-label="Social media">
-            {socialIcons.map(({ label, Icon, href }) => (
-              <a key={label} href={href} aria-label={label} className="grid h-[30px] w-[30px] place-items-center border border-[#555] text-[13px] text-white hover:border-[#e96889] hover:text-[#e96889]">
+            {SOCIAL_ICONS.map(({ label, Icon, href }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                {...linkProps(href)}
+                className="grid h-[30px] w-[30px] place-items-center border border-[#555] text-[13px] text-white hover:border-[#e96889] hover:text-[#e96889]"
+              >
                 <Icon aria-hidden="true" />
               </a>
             ))}

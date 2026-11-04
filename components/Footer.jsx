@@ -1,14 +1,12 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Clock, Shield, Globe, Users, Mail, ArrowUp } from 'lucide-react';
 import {
-  FaFacebookF,
   FaXTwitter,
   FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
+  FaRedditAlien,
 } from 'react-icons/fa6';
+import { SiMedium, SiSubstack } from 'react-icons/si';
 import { getArticles } from '@/lib/data';
 
 const ACCENT = '#a30d32';
@@ -59,12 +57,16 @@ const footerLinkGroups = [
 ];
 
 const socialLinks = [
-  { name: 'Facebook', href: '#', Icon: FaFacebookF },
-  { name: 'X', href: '#', Icon: FaXTwitter },
   { name: 'Instagram', href: 'https://www.instagram.com/intellexa_journal/', Icon: FaInstagram },
-  { name: 'LinkedIn', href: '#', Icon: FaLinkedinIn },
-  { name: 'YouTube', href: '#', Icon: FaYoutube },
+  { name: 'X', href: '#', Icon: FaXTwitter },
+  { name: 'Reddit', href: 'https://www.reddit.com/user/Intellexa_Journal/', Icon: FaRedditAlien },
+  { name: 'Medium', href: 'https://medium.com/@intellexajournal', Icon: SiMedium },
+  { name: 'Substack', href: 'https://substack.com/@intellexajournal', Icon: SiSubstack },
 ];
+
+// Only open real links in a new tab; "#" placeholders stay in the same tab.
+const linkProps = (href) =>
+  href && href !== '#' ? { target: '_blank', rel: 'noopener noreferrer' } : {};
 
 const highlights = [
   {
@@ -183,6 +185,7 @@ export default function Footer() {
                   key={name}
                   href={href}
                   aria-label={name}
+                  {...linkProps(href)}
                   className="flex h-8 w-8 items-center justify-center rounded-full border border-[#333] text-[#ccc] transition-colors hover:border-[#a30d32] hover:text-white"
                 >
                   <Icon className="h-3.5 w-3.5" />
