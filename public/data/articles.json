@@ -1880,6 +1880,146 @@
           "text": "Fixed income strategists say the renewed attention on Treasury market operations also reflects broader questions about how the government plans to manage a rapidly growing federal debt load over the coming years, particularly as interest costs on that debt continue climbing alongside elevated yields. Some analysts have begun urging clients to pay closer attention to Treasury auction results and buyback announcements as leading indicators of policy intent, arguing that in an environment of unusually active Treasury management, these typically overlooked technical details are increasingly capable of moving markets in their own right."
         }
       ]
+    },
+    {
+      "id": 6,
+      "slug": "europe-supermarket-fridges-hacked-again-cyberattack-refrigeration",
+      "metaTitle": "Supermarket Fridges Across Europe Hacked Again",
+      "title": "Supermarket Fridges Across Europe Hacked Again",
+      "metaDescription": "Hackers again tampered with refrigeration systems in supermarkets across Europe, spoiling food as officials probe vulnerable, outdated controllers.",
+      "excerpt": "Hackers again tampered with refrigeration systems in supermarkets across Europe, spoiling food as officials probe vulnerable, outdated controllers.",
+      "category": "business",
+      "categoryLabel": "Business",
+      "newsType": "news",
+      "type": "normal",
+      "date": "05/11/2026",
+      "readTime": "5 min read",
+      "isPublished": "true",
+      "featured": false,
+      "video": false,
+      "image": "/images/news/europe-supermarket-refrigeration-cyberattack-2026.webp",
+      "imageAlt": "Supermarket employees inspect refrigerated food displays and freezers in a European grocery store amid widespread refrigeration cyberattacks.",
+      "keywords": [
+        "supermarket cyberattack",
+        "Europe cyberattack",
+        "refrigeration hack",
+        "Danfoss",
+        "Copeland",
+        "ANSSI",
+        "cybersecurity",
+        "retail",
+        "Business",
+        "food spoilage"
+      ],
+      "takeaways": [
+        "Supermarkets in at least six European countries reported fridges and freezers remotely set to unsafe temperatures.",
+        "Investigators and officials blame outdated controllers, exposed internet connections and default passwords.",
+        "Experts say there is no evidence AI was used, and no suspect or motive has been identified."
+      ],
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Warm fridges and spoiled stock across the continent"
+        },
+        {
+          "type": "paragraph",
+          "text": "Supermarkets in several European countries said this week that their refrigerators and freezers were taken over remotely and pushed to unsafe temperatures. The result was tons of spoiled food and losses that add up to millions of euros, and the episode has left officials scrambling for answers."
+        },
+        {
+          "type": "paragraph",
+          "text": "One Swedish store reported that its units were set to 50 degrees Celsius, or 122 degrees Fahrenheit, which is far beyond anything food can survive. Problems were reported on Monday by stores in at least six countries, among them Sweden, Belgium, Luxembourg, Ireland, Italy and Estonia."
+        },
+        {
+          "type": "paragraph",
+          "text": "It was also not just the big chains that were hit. A butcher in the Athens suburb of Kifisia told Greek broadcaster Skai TV on Tuesday that someone had broken into the temperature controls of a cooling unit and raised the setting to 150 degrees Celsius. The owner, George Boubas, said staff arriving for the 4 a.m. shift spotted the problem first."
+        },
+        {
+          "type": "paragraph",
+          "text": "A technician needed two hours to regain control, and the meat was not damaged, Boubas said. According to him, the technician mentioned that a nearby supermarket and a fast-food restaurant had run into the same trouble, and the shop disconnected the Wi-Fi link to its cooling units to keep outsiders away."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A repeat of an earlier wave"
+        },
+        {
+          "type": "paragraph",
+          "text": "The latest incident closely resembles an attack that took place a few weeks earlier. That one hit refrigeration systems in hundreds of supermarkets and independent shops, mostly in France, Belgium and the Netherlands."
+        },
+        {
+          "type": "paragraph",
+          "text": "French investigators pointed to aging remote-control modules made by Denmark's Danfoss and by Copeland, based in the United States. Danfoss said most of the affected equipment was older and no longer received software or security updates, while Copeland described a weakness in controllers it had already discontinued."
+        },
+        {
+          "type": "paragraph",
+          "text": "France's cybersecurity agency, ANSSI, said it has been looking into refrigeration breaches since mid-October. It named compromised remote controllers in Danfoss's AK-SM and AK-SC ranges, along with Copeland and Dixell xweb systems, and said it is helping potential victims in France. A security alert it first published on October 12 has been updated several times since."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Why a fridge can become a security risk"
+        },
+        {
+          "type": "paragraph",
+          "text": "Experts say the episode is a warning about what happens as more everyday equipment goes online. Katerina Mitrokotsa, a cybersecurity professor at the University of St. Gallen in Switzerland, called it a wake-up call and noted that shops and homes are full of small computers that people still treat like ordinary appliances."
+        },
+        {
+          "type": "paragraph",
+          "text": "Retailers have good reasons to connect their cooling gear. It lets them watch temperatures around the clock across hundreds of stores, receive alerts before food goes bad, cut energy costs and let technicians fix faults from afar. Each connection, though, becomes a possible way in unless it is protected like any other IT system."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nicole Carignan, a senior vice president at the security firm Darktrace, argued that companies are putting money into AI and digital projects while the systems that keep food cold or water clean often run on hardware nobody has paid to maintain since it was installed. She said the attackers did not need a rare, undiscovered flaw. They used controllers exposed to the internet, outdated firmware and default passwords."
+        },
+        {
+          "type": "quote",
+          "text": "That is technical debt coming due."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Officials point to basic cyber hygiene"
+        },
+        {
+          "type": "paragraph",
+          "text": "British officials offered little detail about the newest incident on Tuesday but pointed to what they called legacy technology. Cyber minister Liz Lloyd said the French attack exploited known weaknesses and showed that poor habits, such as weak passwords, continue to expose organizations."
+        },
+        {
+          "type": "paragraph",
+          "text": "Richard Horne, who heads the National Cyber Security Center, told reporters that the French units had been connected straight to the internet with default passwords. His team issued warnings and spent Monday night contacting organizations whose vulnerable equipment was exposed online."
+        },
+        {
+          "type": "paragraph",
+          "text": "Experts also said there was no sign that artificial intelligence was behind the attacks, even though advanced AI systems have drawn scrutiny lately. Paul Chichester, an operations director at the British center, said the methods relied on weaknesses that have been public for a long time, and that this is where the focus should be."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "No suspects, and no stated motive yet"
+        },
+        {
+          "type": "paragraph",
+          "text": "So far, investigators have not worked out who carried out the attacks or why. Italy's cybersecurity and intelligence officials were due to meet on Tuesday to discuss the incident, according to the news agency ANSA, and the European Commission was holding similar discussions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Commission spokesperson Thomas Regnier would not say who might be responsible, explaining that it is a matter for the 27 national authorities in the bloc. He told reporters that the incidents are not isolated and that Europeans must be collectively prepared and resilient when such attacks occur."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "What businesses should take from it"
+        },
+        {
+          "type": "paragraph",
+          "text": "For retailers and other operators, the lesson is practical rather than dramatic. Equipment that is no longer supported, remote access left open to the internet and factory-set passwords are all fixable problems, and officials stress that routine maintenance would have blocked many of these intrusions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Until investigators name a culprit or a motive, businesses are likely to keep checking their connected equipment closely. For a sector that runs on thin margins and fresh food, a few warm hours can be enough to cost a great deal."
+        }
+      ]
     }
   ],
   "finance": [
