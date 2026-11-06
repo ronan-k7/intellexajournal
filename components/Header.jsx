@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { FaXTwitter, FaInstagram, FaRedditAlien } from 'react-icons/fa6';
+import { FaXTwitter, FaInstagram, FaRedditAlien, FaFacebookF } from 'react-icons/fa6';
 import { SiMedium, SiSubstack } from 'react-icons/si';
 import { categoryList, articles } from '@/lib/data';
 
@@ -22,7 +22,7 @@ const ALL_ARTICLES = articles.map((article) => ({
 // ── Social links ──────────────────────────────────────────────────────────
 const SOCIAL_ICONS = [
   { label: 'Instagram', href: 'https://www.instagram.com/intellexa_journal/', Icon: FaInstagram },
-  { label: 'X / Twitter', href: '#', Icon: FaXTwitter },
+   { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61596167224735', Icon: FaFacebookF },
   { label: 'Reddit', href: 'https://www.reddit.com/user/Intellexa_Journal/', Icon: FaRedditAlien },
   { label: 'Medium', href: 'https://medium.com/@intellexajournal', Icon: SiMedium },
   { label: 'Substack', href: 'https://substack.com/@intellexajournal', Icon: SiSubstack },

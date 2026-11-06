@@ -5,6 +5,7 @@ import {
   FaXTwitter,
   FaInstagram,
   FaRedditAlien,
+  FaFacebookF
 } from 'react-icons/fa6';
 import { SiMedium, SiSubstack } from 'react-icons/si';
 import { getArticles } from '@/lib/data';
@@ -58,7 +59,7 @@ const footerLinkGroups = [
 
 const socialLinks = [
   { name: 'Instagram', href: 'https://www.instagram.com/intellexa_journal/', Icon: FaInstagram },
-  { name: 'X', href: '#', Icon: FaXTwitter },
+  { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61596167224735', Icon: FaFacebookF },
   { name: 'Reddit', href: 'https://www.reddit.com/user/Intellexa_Journal/', Icon: FaRedditAlien },
   { name: 'Medium', href: 'https://medium.com/@intellexajournal', Icon: SiMedium },
   { name: 'Substack', href: 'https://substack.com/@intellexajournal', Icon: SiSubstack },
