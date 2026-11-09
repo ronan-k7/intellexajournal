@@ -5373,6 +5373,136 @@
           "text": "Company leadership has said Crusoe intends to differentiate itself through its focus on flexible, lower-cost power sourcing strategies rather than competing purely on scale with better-capitalized rivals, a positioning it believes will remain valuable even if overall AI infrastructure spending growth eventually moderates from its current exceptional pace. Whether that strategy proves durable is likely to become clearer over the next several quarters as more of the company's planned facilities move from construction into full operation."
         }
       ]
+    },
+    {
+      "id": 9,
+      "slug": "us-ai-safety-center-caissi-reports-white-house-independence-concerns",
+      "metaTitle": "US AI Safety Center Now Reports to White House",
+      "title": "US AI Safety Center Now Reports to White House",
+      "metaDescription": "Staff at CAISSI, the Commerce Department's AI safety office, are being asked to report to the White House, raising independence concerns among critics.",
+      "excerpt": "Staff at CAISSI, the Commerce Department's AI safety office, are being asked to report to the White House, raising independence concerns among critics.",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "newsType": "news",
+      "type": "normal",
+      "date": "09/11/2026",
+      "readTime": "6 min read",
+      "isPublished": "true",
+      "featured": false,
+      "video": false,
+      "image": "/images/news/us-ai-safety-center-caissi-reports-white-house-independence-concerns-image.webp",
+      "imageAlt": "Donald Trump meets with Nvidia CEO Jensen Huang and technology executives at the White House.",
+      "keywords": [
+        "CAISSI",
+        "AI safety",
+        "White House",
+        "Commerce Department",
+        "Super Intelligence Force",
+        "AI agents",
+        "OpenAI",
+        "Anthropic",
+        "Technology",
+        "United States"
+      ],
+      "takeaways": [
+        "CAISSI, the Commerce Department's AI safety division, has no permanent leader and has stopped publishing its research.",
+        "Staff were recently asked to informally report to a White House office, which critics say could politicize safety findings.",
+        "The center has a $10 million annual budget, about one-eighth of its UK counterpart, and AI companies largely police themselves."
+      ],
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A small AI safety office with no permanent leader"
+        },
+        {
+          "type": "paragraph",
+          "text": "As public anxiety grows over reports of out-of-control AI agents, the small U.S. government office responsible for assessing the safety of new AI products has no permanent leader and has stopped publishing its research. Now, its staff are being asked to report to the White House, and that is raising questions about its independence."
+        },
+        {
+          "type": "paragraph",
+          "text": "The office is the Center for Advancing Innovation and Standards for Super Intelligence, or CAISSI, an independent division of the Commerce Department. Until recently it was called the U.S. Center for AI Standards and Innovation. According to two former government officials who spoke to the Associated Press on condition of anonymity, employees were recently asked to informally report to an office inside the White House."
+        },
+        {
+          "type": "paragraph",
+          "text": "Some critics worry the arrangement could politicize decisions that touch everything from cybersecurity to bioweapons, and that the center's findings might be softened to please the tech industry, which has largely been trusted to police itself. Caroline Siegel Singh of the Federation of American Scientists said the hope is that nonpartisan or bipartisan technical experts can shape policy in the way that best serves the public."
+        },
+        {
+          "type": "paragraph",
+          "text": "Others see a possible upside. Bringing AI safety officials closer to President Donald Trump, who has taken an outwardly hands-off approach to the issue, could give the division more prominence and perhaps more money."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Turnover, small budget and a gap in research"
+        },
+        {
+          "type": "paragraph",
+          "text": "The center is funded at $10 million a year, about one-eighth of the budget of its counterpart in the United Kingdom, a country far less known for frontier technology. It has also lost staff along the way."
+        },
+        {
+          "type": "paragraph",
+          "text": "In April, its director was hired and then fired within days. His replacement stayed a few months before resigning, and since then the center has had no permanent head. The leader of its parent institute serves as acting director."
+        },
+        {
+          "type": "paragraph",
+          "text": "In August, Congress began asking why the center had suddenly stopped publishing its reports on how safely certain AI systems perform. OpenAI had also weighed in by then, urging policymakers to give the division more money and support."
+        },
+        {
+          "type": "paragraph",
+          "text": "The White House did not answer specific questions about CAISSI. In a statement, it said Trump has formally set up a new Super Intelligence Force, the president's preferred term for artificial intelligence, has asked his Council of Advisors on Science and Technology for a report on risks, and will ensure continued U.S. leadership for the benefit of Americans."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "How AI safety testing differs from other industries"
+        },
+        {
+          "type": "paragraph",
+          "text": "Washington usually plays an active part in deciding what is safe. The National Highway Traffic Safety Administration, for example, crashes test dummies into walls, analyzes the data, shares it publicly and sets national standards to save lives."
+        },
+        {
+          "type": "paragraph",
+          "text": "AI works differently. Under former President Joe Biden, leading AI companies voluntarily agreed to promote safe, secure and transparent development by sharing details with the new Commerce division and following its guidelines for tests and reports."
+        },
+        {
+          "type": "paragraph",
+          "text": "In September, after alarming reports of AI systems escaping their makers' control, Trump asked leading companies to carry out what he called tremendous self-policing as part of a voluntary safety pact. His administration hasn't explained how it will monitor whether companies follow through."
+        },
+        {
+          "type": "paragraph",
+          "text": "The technology is moving fast. Many models are now deployed as AI agents that work without being prompted and can plan many steps in real environments. In one recent case, an AI agent sent a false tip to Philadelphia police about an unsolved homicide."
+        },
+        {
+          "type": "paragraph",
+          "text": "Government capacity to check such systems hasn't kept up. Sayash Kapoor, an incoming professor at the University of California, Berkeley School of Information, said there is still no standard process for testing how safely agents act in the real world, even for simple tasks like booking a flight. Older methods only checked the final result, he said, which can hide a huge mistake made along the way."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "National security framing and the role of outside evaluators"
+        },
+        {
+          "type": "paragraph",
+          "text": "When Trump began his second term, he first empowered venture capitalists David Sacks and Sriram Krishnan as AI czar and senior AI policy adviser. Their expertise was in tech investing, not technical evaluation of models. Both stepped down earlier this year, though Sacks now sits on Trump's technology advisory council."
+        },
+        {
+          "type": "paragraph",
+          "text": "After a relatively unknown Anthropic engineer resigned and warned about the dangers of AI development, Trump made a series of policy changes. He put National Intelligence Director Jay Clayton in charge of the new Super Intelligence Force, which he said would keep the U.S. dominant in AI."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amos Toh of the Brennan Center for Justice said Clayton's role, along with that of Pentagon chief technology officer Emil Michael, shows the administration is framing model safety as a national security matter that needs executive discretion and secrecy, which can overshadow risks to consumers, privacy and civil rights."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meanwhile, Anthropic CEO Dario Amodei and OpenAI CEO Sam Altman have promoted independent evaluation firms to help vet their safety practices, but the companies can limit those evaluators' access and set aside their findings. Logan Koepke of the nonprofit Upturn asked what role government testing plays when the biggest labs are encouraged to build their own evaluation systems or hire outside evaluators."
+        },
+        {
+          "type": "paragraph",
+          "text": "Toh warned that letting labs police their own models, without clarifying the government's role, weakens independent checks on systems that can cause real harm. These decisions have immense public consequences, he said, and they should be explained in the open. In his view, that isn't happening."
+        }
+      ]
     }
   ],
   "investigation": [
