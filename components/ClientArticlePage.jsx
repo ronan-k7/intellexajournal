@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Briefcase, CalendarDays, Handshake, Landmark, Mail, Scale, Users } from 'lucide-react';
+import { ArrowUpRight, Briefcase, CalendarDays, Handshake, Landmark, Mail, Scale, Users } from 'lucide-react';
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaQuoteLeft } from 'react-icons/fa6';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -10,6 +10,17 @@ import { parseDate, isoDate } from '@/lib/data';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
 
 const RED = '#d0111b';
+
+// NYT feature card config (image goes in /public/images/nyt-alina-habba.webp)
+const NYT_CARD = {
+  image: '/images/nyt-alina-habba.webp',
+  width: 1625,
+  height: 2160,
+  alt: 'The New York Times report on Alina Habba losing a $50 million contract',
+  text:
+    'The New York Times reports that Alina Habba has lost a $50 million contract tied to a family company, weeks before a presidential pardon for the family’s patriarch.',
+  href: 'https://www.nytimes.com/2026/11/10/us/politics/alina-habba-fired-pardon.html',
+};
 
 const longDate = (d) =>
   parseDate(d).toLocaleDateString('en-US', {
@@ -83,6 +94,47 @@ function SideBox({ title, children, tint = false }) {
       />
 
       {children}
+    </section>
+  );
+}
+
+// Image card with short text + Read more link (sidebar)
+function NytCard() {
+  return (
+    <section className="overflow-hidden border border-[#e6e2dc] bg-white shadow-[0_2px_10px_rgba(0,0,0,0.08)]">
+      <a
+        href={NYT_CARD.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Read the New York Times article on Alina Habba"
+        className="block"
+      >
+        <Image
+          src={NYT_CARD.image}
+          alt={NYT_CARD.alt}
+          width={NYT_CARD.width}
+          height={NYT_CARD.height}
+          sizes="300px"
+          className="block h-auto w-full"
+        />
+      </a>
+
+      <div className="p-4">
+        <p className="m-0 font-serif text-[13px] leading-[1.5] text-[#333]">
+          {NYT_CARD.text}
+        </p>
+
+        <a
+          href={NYT_CARD.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex items-center gap-1 text-[12px] font-bold uppercase tracking-[0.04em] hover:underline"
+          style={{ color: RED }}
+        >
+          Read more
+          <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+        </a>
+      </div>
     </section>
   );
 }
@@ -688,6 +740,10 @@ export default function ClientArticlePage({ article, related = [] }) {
 
               </SideBox>
             )}
+
+            {/* NYT Image Card (above Related Stories) */}
+
+            <NytCard />
 
             {/* Related Stories */}
 
