@@ -1,3 +1,4 @@
+// components/markroshiniArticlepage.jsx
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -17,6 +18,7 @@ import CopyLinkButton from '@/components/CopyLinkButton';
 import StickySidebar from '@/components/StickySidebar';
 import { parseDate, isoDate } from '@/lib/data';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
+import { AUTHOR_PATH } from '@/lib/author';
 
 // Palette: deep navy "case file" look with a brass accent.
 const NAVY = '#0b1a30';
@@ -420,7 +422,10 @@ export default function MarkRossiniArticlePage({ article, related = [] }) {
               <div className="flex items-center gap-2.5 text-[12px] text-[#555]">
                 <Avatar initials={by.initials} />
                 <span>
-                  By <strong className="font-serif font-semibold text-[#111]">{by.name}</strong>
+                  By{' '}
+                  <Link href={AUTHOR_PATH} className="font-serif font-semibold text-[#111] hover:underline">
+                    {by.name}
+                  </Link>
                 </span>
                 <span className="h-3.5 w-px bg-[#ccc]" aria-hidden="true" />
                 <span>{article.readTime}</span>

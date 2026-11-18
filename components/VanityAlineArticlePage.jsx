@@ -1,3 +1,4 @@
+// components/VanityAlineArticlePage.jsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight, Briefcase, CalendarDays, Handshake, Landmark, Mail, Scale, Users } from 'lucide-react';
@@ -8,6 +9,7 @@ import CopyLinkButton from '@/components/CopyLinkButton';
 import StickySidebar from '@/components/StickySidebar';
 import { parseDate, isoDate } from '@/lib/data';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
+import { AUTHOR_PATH } from '@/lib/author';
 
 const RED = '#d0111b';
 const GOLD = '#e3b866';
@@ -583,9 +585,12 @@ export default function VanityAlineArticlePage({ article, related = [] }) {
 
                 <span>
                   By{' '}
-                  <strong className="font-serif font-semibold text-[#111]">
+                  <Link
+                    href={AUTHOR_PATH}
+                    className="font-serif font-semibold text-[#111] hover:underline"
+                  >
                     {by.name}
-                  </strong>
+                  </Link>
                 </span>
 
                 <span

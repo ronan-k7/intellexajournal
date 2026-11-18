@@ -1,3 +1,4 @@
+// components/ClientArticlePage.jsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight, Briefcase, CalendarDays, Handshake, Landmark, Mail, Scale, Users } from 'lucide-react';
@@ -8,6 +9,7 @@ import CopyLinkButton from '@/components/CopyLinkButton';
 import StickySidebar from '@/components/StickySidebar';
 import { parseDate, isoDate } from '@/lib/data';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
+import { AUTHOR_PATH } from '@/lib/author';
 
 const RED = '#d0111b';
 
@@ -571,9 +573,12 @@ export default function ClientArticlePage({ article, related = [] }) {
 
                 <span>
                   By{' '}
-                  <strong className="font-serif font-semibold text-[#111]">
+                  <Link
+                    href={AUTHOR_PATH}
+                    className="font-serif font-semibold text-[#111] hover:underline"
+                  >
                     {by.name}
-                  </strong>
+                  </Link>
                 </span>
 
                 <span
@@ -823,16 +828,19 @@ export default function ClientArticlePage({ article, related = [] }) {
 
                 <div>
 
-                  <strong className="block font-serif text-[14px] leading-tight text-[#111]">
+                  <Link
+                    href={AUTHOR_PATH}
+                    className="block font-serif text-[14px] font-bold leading-tight text-[#111] hover:underline"
+                  >
                     {by.name}
-                  </strong>
+                  </Link>
 
                   <p className="my-1.5 text-[11.5px] leading-[1.45] text-[#777]">
                     {by.bio}
                   </p>
 
                   <Link
-                    href={by.href}
+                    href={AUTHOR_PATH}
                     className="text-[11.5px] font-bold hover:underline"
                     style={{ color: '#1a56db' }}
                   >

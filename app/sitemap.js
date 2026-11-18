@@ -1,6 +1,8 @@
+// app/sitemap.js
 import { getArticles, categories, getCategoryArticles, isoDate } from '@/lib/data';
 import { STATIC_PATHS, LAST_UPDATED } from '@/lib/static-pages.mjs';
 import { SITE_URL } from '@/lib/site';
+import { AUTHOR_PATH } from '@/lib/author';
 
 // Served automatically at /sitemap.xml. Built from public/data/articles.json,
 // so every new/unpublished article is reflected on the next build.
@@ -45,6 +47,14 @@ export default function sitemap() {
     };
   });
 
+  // Author page
+  const authorPage = {
+    url: `${SITE_URL}${AUTHOR_PATH}`,
+    lastModified: newest,
+    changeFrequency: 'daily',
+    priority: 0.5,
+  };
+
   // Articles
   const articlePages = articles.map((a) => ({
     url: `${SITE_URL}/${a.category}/${a.slug}`,
@@ -54,5 +64,5 @@ export default function sitemap() {
     ...(a.image ? { images: [a.image.startsWith('http') ? a.image : `${SITE_URL}${a.image}`] } : {}),
   }));
 
-  return [home, ...categoryPages, ...staticPages, ...articlePages];
+  return [home, ...categoryPages, ...staticPages, authorPage, ...articlePages];
 }

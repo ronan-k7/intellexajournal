@@ -1,3 +1,4 @@
+// app/[category]/[slug]/page.jsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -9,6 +10,7 @@ import MarkRossiniArticlePage from '@/components/markroshiniArticlepage';
 import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG, ROSSINI_ARTICLE_SLUG } from '@/lib/client-article';
 import { buildMetadata } from '@/lib/seo';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
+import { AUTHOR_PATH } from '@/lib/author';
 import StoryCard from '@/components/ui/StoryCard';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { articles, getArticle, getArticles, getCategoryArticles, formatDate, isoDate } from '@/lib/data';
@@ -262,7 +264,7 @@ export default async function ArticlePage({ params }) {
                 <>
                   <span aria-hidden="true">·</span>
                   <span>
-                    By <strong className="font-bold text-[#111]">{author.name}</strong>
+                    By <Link href={AUTHOR_PATH} className="font-bold text-[#111] hover:underline">{author.name}</Link>
                   </span>
                 </>
               )}
@@ -300,7 +302,7 @@ export default async function ArticlePage({ params }) {
                 <span className="text-[9px] font-extrabold uppercase tracking-[0.08em]" style={{ color: ACCENT }}>Newsroom</span>
                 <div className="mt-1.5 flex items-center gap-2.5">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#111] font-serif text-[14px] font-bold text-white" aria-hidden="true">{author.initials}</span>
-                  <strong className="block font-serif text-[15px] leading-tight">{author.name}</strong>
+                  <Link href={AUTHOR_PATH} className="block font-serif text-[15px] font-bold leading-tight hover:underline">{author.name}</Link>
                 </div>
                 <p className="mt-2 line-clamp-4 font-serif text-[12.5px] leading-[1.45] text-[#555]">{author.bio}</p>
               </div>
