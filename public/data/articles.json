@@ -4929,6 +4929,229 @@
           "text": "Schumer remains the favorite, but Van Hollen's bid exposes a real split in the party. Over the coming weeks, the main things to watch are how many undecided senators commit, whether more progressives line up behind Van Hollen, and what he says about his own plans before the December vote."
         }
       ]
+    },
+    {
+      "id": 13,
+      "slug": "mark-rossini-from-fbi-agent-to-defendant-public-record-legal-journey",
+      "template": "client-rossini",
+      "label": "News Analysis",
+      "metaTitle": "From FBI Agent to Defendant: The Public Record of Mark Rossini’s Legal Journey",
+      "title": "From FBI Agent to Defendant: The Public Record of Mark Rossini’s Legal Journey",
+      "metaDescription": "Mark Rossini, a former FBI agent turned consultant, was pardoned by President Donald Trump in January 2026. Here is the public record of the case, the plea, the pardons and the dismissal.",
+      "excerpt": "Mark Rossini’s name entered the national conversation through two very different parts of his professional life: federal investigator and consultant in a Puerto Rico banking and political influence case.",
+      "category": "politics",
+      "categoryLabel": "Politics",
+      "newsType": "news",
+      "type": "normal",
+      "dateline": "SAN JUAN, PUERTO RICO",
+      "date": "18/11/2026",
+      "readTime": "5 min read",
+      "isPublished": "true",
+      "featured": false,
+      "video": false,
+      "image": "/images/news/mark-rossini-imagess.webp",
+      "imagePosition": "50% 25%",
+      "imageAlt": "Mark Rossini, former FBI agent, speaking in an outdoor interview",
+      "keywords": [
+        "Mark Rossini",
+        "Julio Herrera Velutini",
+        "Wanda Vázquez Garced",
+        "Donald Trump",
+        "Presidential Pardon",
+        "Puerto Rico",
+        "Campaign Finance",
+        "Executive Clemency",
+        "Former FBI Agent",
+        "Federal Court"
+      ],
+      "byline": {
+        "name": "News Desk",
+        "initials": "ND",
+        "href": "/politics",
+        "bio": "Our editorial team reports on U.S. politics, policy and power, with a focus on accountability and the institutions that shape American life."
+      },
+      "highlights": [
+        {
+          "icon": "shield",
+          "text": "A former FBI agent who later worked as a consultant to banker Julio Herrera Velutini."
+        },
+        {
+          "icon": "gavel",
+          "text": "A guilty plea to a lesser campaign-finance offense in 2025 moved the case toward sentencing."
+        },
+        {
+          "icon": "scale",
+          "text": "Two pardon warrants, dated January 15 and January 20, 2026."
+        },
+        {
+          "icon": "landmark",
+          "text": "A pardon is not a judicial finding of innocence."
+        }
+      ],
+      "timeline": [
+        {
+          "date": "Before 2025",
+          "text": "Federal service with the FBI, then consulting work connected to Julio Herrera Velutini."
+        },
+        {
+          "date": "Indictment",
+          "text": "Prosecutors allege Rossini acted as an intermediary in a campaign-support and regulator-pressure effort."
+        },
+        {
+          "date": "2025",
+          "text": "Rossini and his co-defendants plead guilty to a lesser campaign-finance offense."
+        },
+        {
+          "date": "January 15, 2026",
+          "text": "First pardon warrant lists Rossini in the broader three-defendant case."
+        },
+        {
+          "date": "January 20, 2026",
+          "text": "Second warrant names United States v. Mark T. Rossini, case number 3:25-cr-298."
+        },
+        {
+          "date": "After acceptance",
+          "text": "Lawyers tell the court Rossini accepts the pardon; the court dismisses the proceedings as moot."
+        }
+      ],
+      "relatedSlugs": [
+        "the-vanity-of-alina-habba-mildon",
+        "2026-midterm-elections-house-battle-for-control-tightens",
+        "justice-department-review-epstein-files-congressional-pressure"
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Mark Rossini’s name entered the national conversation through two very different parts of his professional life. He was once a federal investigator, including service with the FBI, and later became a consultant connected to a Puerto Rico banking and political influence case. In January 2026, his legal story ended in federal court after President Donald Trump issued full and unconditional pardons covering the charges against him."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rossini’s background is relevant because it shaped the public interest in the prosecution. A former federal agent facing federal charges draws attention not only because of the allegations but also because readers want to understand how someone familiar with investigative institutions became a defendant in a major public-corruption case. The official pardon warrants do not provide a biography, but court records and contemporaneous reports describe Rossini as a former FBI agent who later provided consulting services to banker Julio Herrera Velutini."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prosecutors alleged that Rossini acted as an intermediary in an effort involving Herrera Velutini and former Puerto Rico Gov. Wanda Vázquez Garced. According to the indictment and reporting on the case, the alleged plan involved campaign support for Vázquez Garced and pressure to replace the head of Puerto Rico’s financial regulator. The regulator was examining a bank connected to Herrera Velutini. The allegations were contested, and the case never reached a trial on the original charges."
+        },
+        {
+          "type": "people",
+          "people": [
+            {
+              "name": "Julio Herrera Velutini",
+              "role": "Banker",
+              "image": "/images/news/julio-herrera-velutini.webp",
+              "width": 900,
+              "height": 653,
+              "position": "50% 20%",
+              "alt": "Julio Herrera Velutini",
+              "href": "https://en.wikipedia.org/wiki/Julio_Herrera_Velutini"
+            },
+            {
+              "name": "Wanda Vázquez Garced",
+              "role": "Former Governor of Puerto Rico",
+              "image": "/images/news/wanda-vazquez-garced.webp",
+              "width": 900,
+              "height": 506,
+              "position": "50% 20%",
+              "alt": "Wanda Vázquez Garced",
+              "href": "https://en.wikipedia.org/wiki/Wanda_V%C3%A1zquez_Garced"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The criminal case changed course in 2025. Rather than proceed toward trial on the most serious counts, Rossini and his co-defendants pleaded guilty to a lesser campaign-finance offense. The plea agreement moved the case to the sentencing stage. That stage was later interrupted by the President’s pardons."
+        },
+        {
+          "type": "paragraph",
+          "text": "The first pardon warrant, dated January 15, listed Rossini in the broader case involving the three defendants. A second warrant, dated January 20, specifically identified United States v. Mark T. Rossini, case number 3:25-cr-298. Rossini’s lawyers notified the federal court that he accepted the pardon and requested dismissal of the charges. The court later dismissed the relevant proceedings as moot after the pardons were accepted."
+        },
+        {
+          "type": "paragraph",
+          "text": "The legal outcome did not answer every question surrounding Rossini’s conduct. A pardon does not operate as a judicial finding of innocence, and the public record still includes the allegations made by prosecutors and the facts admitted in the lesser plea. For that reason, news coverage should avoid describing Rossini as either proven innocent or proven guilty of the original allegations. The accurate description is that he was pardoned, accepted the pardon, and had the federal case dismissed."
+        },
+        {
+          "type": "paragraph",
+          "text": "The case also highlights the difference between professional identity and legal status. Rossini’s former position at the FBI is part of his history, but it does not determine the merits of the charges. Likewise, the pardon closed the criminal proceeding but did not erase the public debate about how the case was investigated, prosecuted, and resolved."
+        },
+        {
+          "type": "paragraph",
+          "text": "The story’s human dimension lies in that transition. A person whose career was associated with federal law enforcement became the subject of federal scrutiny. His name then became associated with a constitutional decision made at the highest level of the executive branch. The same event that ended his immediate legal exposure also intensified questions about political influence and the fairness of the criminal-justice system."
+        },
+        {
+          "type": "paragraph",
+          "text": "Readers should also understand the limits of public reporting around the case. Court filings can establish what prosecutors alleged, what defendants admitted in a plea, what lawyers argued, and what judges ordered. They do not automatically prove every assertion in a charging document. A responsible article should use words such as alleged, according to prosecutors, admitted in the plea agreement, and the court ruled, depending on the fact being described."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Mark Rossini timeline is therefore best read as a sequence: federal service, consulting work, indictment, a lesser plea, presidential clemency, acceptance, and dismissal. Each stage has a different source and a different legal meaning. Combining them into one simplified label would make the story easier to read but less accurate."
+        },
+        {
+          "type": "textWithPerson",
+          "text": "The official pardon warrants are the clearest record of the final executive action. They establish that President Trump granted full and unconditional pardons for the offenses individually listed in the relevant cases. The court filings and dismissal order establish what happened afterward. The indictment and plea materials establish the earlier allegations and admissions.",
+          "person": {
+            "name": "Donald Trump",
+            "role": "President of the United States",
+            "image": "/images/news/donald-trump.webp",
+            "width": 696,
+            "height": 393,
+            "position": "50% 25%",
+            "alt": "Donald Trump",
+            "href": "https://en.wikipedia.org/wiki/Donald_Trump"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "For Mark Rossini, the legal case is closed in federal court. The public story is not as simple. It continues to raise questions about how former law-enforcement officials move through private consulting, how political networks influence regulation, and how presidential clemency reshapes the consequences of a federal prosecution. Those questions can be examined without overstating what the documents prove."
+        }
+      ],
+      "factCard": {
+        "title": "Case at a Glance",
+        "stats": [
+          {
+            "icon": "scale",
+            "value": "2",
+            "label": "Pardon warrants"
+          },
+          {
+            "icon": "calendar",
+            "value": "Jan 2026",
+            "label": "Warrants dated Jan 15 and Jan 20"
+          }
+        ],
+        "text": "The accurate description is that he was pardoned, accepted the pardon, and had the federal case dismissed."
+      },
+      "sources": [
+        {
+          "title": "Trump Pardons Venezuelan Banker, Ex-Puerto Rico Governor",
+          "publisher": "Bloomberg Law",
+          "url": "https://news.bloomberglaw.com/us-law-week/trump-to-pardon-venezuelan-banker-ex-puerto-rico-governor-82"
+        },
+        {
+          "title": "Trump to pardon ex-Puerto Rico governor Vázquez in campaign finance case, official says",
+          "publisher": "Associated Press",
+          "url": "https://6abc.com/post/trump-pardon-ex-puerto-rico-governor-vzquez-campaign-finance-case-official-says/18417246/"
+        },
+        {
+          "title": "Trump issues a flurry of pardons, including for a woman whose sentence he commuted in his first term",
+          "publisher": "Associated Press",
+          "url": "https://www.news4jax.com/news/politics/2026/01/17/trump-issues-a-flurry-of-pardons-including-for-a-woman-whose-sentence-he-commuted-in-his-first-term/"
+        },
+        {
+          "title": "Trump sets fraudster free from prison for a second time",
+          "publisher": "The San Juan Daily Star / The New York Times",
+          "url": "https://www.sanjuandailystar.com/post/trump-sets-fraudster-free-from-prison-for-a-second-time"
+        },
+        {
+          "title": "Trump pardons former Puerto Rico governor Vazquez",
+          "publisher": "Reuters via Aaj News",
+          "url": "https://english.aaj.tv/news/330451026"
+        },
+        {
+          "title": "Clemency Grants by President Donald J. Trump (2025–Present)",
+          "publisher": "U.S. Department of Justice, Office of the Pardon Attorney",
+          "url": "https://www.justice.gov/pardon/clemency-grants-president-donald-j-trump-2025-present"
+        }
+      ]
     }
   ],
   "health": [

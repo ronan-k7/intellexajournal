@@ -5,7 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ClientArticlePage from '@/components/ClientArticlePage';
 import VanityAlineArticlePage from '@/components/VanityAlineArticlePage';
-import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG } from '@/lib/client-article';
+import MarkRossiniArticlePage from '@/components/markroshiniArticlepage';
+import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG, ROSSINI_ARTICLE_SLUG } from '@/lib/client-article';
 import { buildMetadata } from '@/lib/seo';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
 import StoryCard from '@/components/ui/StoryCard';
@@ -175,6 +176,13 @@ export default async function ArticlePage({ params }) {
     const everything = getArticles();
     const related = (article.relatedSlugs || []).map((s) => everything.find((item) => item.slug === s)).filter(Boolean);
     return <VanityAlineArticlePage article={article} related={related} />;
+  }
+
+  // Special design for the third client feature article (Mark Rossini).
+  if (slug === ROSSINI_ARTICLE_SLUG) {
+    const everything = getArticles();
+    const related = (article.relatedSlugs || []).map((s) => everything.find((item) => item.slug === s)).filter(Boolean);
+    return <MarkRossiniArticlePage article={article} related={related} />;
   }
 
   const author = article.author;
