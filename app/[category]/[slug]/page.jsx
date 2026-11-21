@@ -1,4 +1,5 @@
 // app/[category]/[slug]/page.jsx
+// app/[category]/[slug]/page.jsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -7,7 +8,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ClientArticlePage from '@/components/ClientArticlePage';
 import VanityAlineArticlePage from '@/components/VanityAlineArticlePage';
 import MarkRossiniArticlePage from '@/components/markroshiniArticlepage';
-import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG, ROSSINI_ARTICLE_SLUG } from '@/lib/client-article';
+import AlinahabbaArticlePage from '@/components/AlinahabbaArticlePage';
+import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG, ROSSINI_ARTICLE_SLUG, CEMENT_ARTICLE_SLUG } from '@/lib/client-article';
 import { buildMetadata } from '@/lib/seo';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
 import { AUTHOR_PATH } from '@/lib/author';
@@ -185,6 +187,13 @@ export default async function ArticlePage({ params }) {
     const everything = getArticles();
     const related = (article.relatedSlugs || []).map((s) => everything.find((item) => item.slug === s)).filter(Boolean);
     return <MarkRossiniArticlePage article={article} related={related} />;
+  }
+
+  // Special design for the fourth client feature article (Venezuela cement contracts).
+  if (slug === CEMENT_ARTICLE_SLUG) {
+    const everything = getArticles();
+    const related = (article.relatedSlugs || []).map((s) => everything.find((item) => item.slug === s)).filter(Boolean);
+    return <AlinahabbaArticlePage article={article} related={related} />;
   }
 
   const author = article.author;

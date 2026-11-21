@@ -1,11 +1,12 @@
 // components/home/LeadNews.jsx
 import StoryCard from '@/components/ui/StoryCard';
 
-// `hero`, `secondary` and `tertiary` are pinned (the client feature stories) and never
+// `hero`, `secondary`, `tertiary` and `quaternary` are pinned (the client feature stories) and never
 // change when new articles are published; `articles` fills the other slots.
 // `secondary` is always the 2nd item of the left column.
 // `tertiary` is always the FIRST card of the bottom row.
-export default function LeadNews({ hero, secondary = null, tertiary = null, articles }) {
+// `quaternary` is always the SECOND card of the bottom row.
+export default function LeadNews({ hero, secondary = null, tertiary = null, quaternary = null, articles }) {
   const lead = hero;
   const rest = articles;
   // With a pinned secondary story the left column uses rest[0] + secondary, so the
@@ -40,7 +41,7 @@ export default function LeadNews({ hero, secondary = null, tertiary = null, arti
       </div>
 
       <div className="mt-4 grid grid-cols-1 gap-3 border-t border-[#bbb] pt-3.5 sm:grid-cols-3 sm:gap-[22px]">
-        {[tertiary, ...rest.slice(shift + 5, shift + 8)].filter(Boolean).slice(0, 3).map((article) => (
+        {[tertiary, quaternary, ...rest.slice(shift + 5, shift + 8)].filter(Boolean).slice(0, 3).map((article) => (
           <StoryCard key={article.slug} article={article} variant="compact" />
         ))}
       </div>
