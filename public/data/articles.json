@@ -8024,7 +8024,7 @@
         }
       ]
     },
-      {
+    {
       "id": 15,
       "slug": "venezuela-cement-contracts-alina-habba-turhan-mildon",
       "template": "client-cement",
@@ -8168,6 +8168,14 @@
         {
           "type": "paragraph",
           "text": "The competing positions make the cement contracts an important subject for understanding the intersection of international business, political relationships and changing government priorities."
+        },
+        {
+          "type": "image",
+          "src": "/images/news/turhan-mildon-caracas-washington-venezuela-business-interests.webp",
+          "alt": "Alina Habba and Turhan Mildon",
+          "caption": "Alina Habba and Turhan Mildon",
+          "width": 976,
+          "height": 549
         },
         {
           "type": "heading",

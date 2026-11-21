@@ -119,6 +119,33 @@ function renderBlock(block, index, ctx) {
       );
     }
 
+    case 'image':
+      return (
+        <figure
+          key={index}
+          className="my-8 overflow-hidden border bg-white shadow-[0_2px_12px_rgba(27,36,48,0.10)]"
+          style={{ borderColor: LINE }}
+        >
+          <Image
+            src={block.src}
+            alt={block.alt || ''}
+            width={block.width || 976}
+            height={block.height || 549}
+            sizes="(min-width: 1024px) 760px, 100vw"
+            className="block h-auto w-full"
+          />
+          {block.caption && (
+            <figcaption
+              className="flex items-center gap-3 px-4 py-2.5"
+              style={{ background: CEMENT, borderTop: `3px solid ${AMBER}` }}
+            >
+              <span className="h-4 w-1 shrink-0" style={{ background: SLATE }} aria-hidden="true" />
+              <span className="font-serif text-[12.5px] italic leading-[1.4] text-[#444]">{block.caption}</span>
+            </figcaption>
+          )}
+        </figure>
+      );
+
     case 'heading': {
       const num = String(ctx.headingNumbers.get(index) || '').padStart(2, '0');
       const Tag = `h${block.level || 2}`;
