@@ -8085,23 +8085,33 @@
       "people": [
         {
           "name": "Turhan Mildon",
-          "role": "Turkish investor; operated state-owned cement plants in Venezuela"
+          "role": "Turkish investor; operated state-owned cement plants in Venezuela",
+          "image": "/images/people/turhan-mildon.webp",
+          "wiki": "https://en.wikipedia.org/w/index.php?search=Turhan+Mildon"
         },
         {
           "name": "Alina Habba",
-          "role": "Donald Trump’s former personal lawyer"
+          "role": "Donald Trump’s former personal lawyer",
+          "image": "/images/people/alina-habba.webp",
+          "wiki": "https://en.wikipedia.org/wiki/Alina_Habba"
         },
         {
           "name": "Alex Saab",
-          "role": "Colombian businessman; later extradited"
+          "role": "Colombian businessman; later extradited",
+          "image": "/images/people/alex-saab.webp",
+          "wiki": "https://en.wikipedia.org/wiki/Alex_Saab"
         },
         {
           "name": "Nicolás Maduro",
-          "role": "Venezuelan leader whose fall changed the business climate"
+          "role": "Venezuelan leader whose fall changed the business climate",
+          "image": "/images/people/nicolas-maduro.webp",
+          "wiki": "https://en.wikipedia.org/wiki/Nicol%C3%A1s_Maduro"
         },
         {
           "name": "Donald Trump",
-          "role": "U.S. president"
+          "role": "U.S. president",
+          "image": "/images/people/donald-trump.webp",
+          "wiki": "https://en.wikipedia.org/wiki/Donald_Trump"
         }
       ],
       "timeline": [
