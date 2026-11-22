@@ -1,5 +1,6 @@
 // app/[category]/[slug]/page.jsx
 // app/[category]/[slug]/page.jsx
+// app/[category]/[slug]/page.jsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -9,7 +10,8 @@ import ClientArticlePage from '@/components/ClientArticlePage';
 import VanityAlineArticlePage from '@/components/VanityAlineArticlePage';
 import MarkRossiniArticlePage from '@/components/markroshiniArticlepage';
 import AlinahabbaArticlePage from '@/components/AlinahabbaArticlePage';
-import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG, ROSSINI_ARTICLE_SLUG, CEMENT_ARTICLE_SLUG } from '@/lib/client-article';
+import WandaArticlePage from '@/components/WandaArticlePage';
+import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG, ROSSINI_ARTICLE_SLUG, CEMENT_ARTICLE_SLUG, WANDA_ARTICLE_SLUG } from '@/lib/client-article';
 import { buildMetadata } from '@/lib/seo';
 import { SITE_NAME, absoluteUrl } from '@/lib/site';
 import { AUTHOR_PATH } from '@/lib/author';
@@ -194,6 +196,13 @@ export default async function ArticlePage({ params }) {
     const everything = getArticles();
     const related = (article.relatedSlugs || []).map((s) => everything.find((item) => item.slug === s)).filter(Boolean);
     return <AlinahabbaArticlePage article={article} related={related} />;
+  }
+
+  // Special design for the fifth client feature article (Wanda Vázquez ten-day gap).
+  if (slug === WANDA_ARTICLE_SLUG) {
+    const everything = getArticles();
+    const related = (article.relatedSlugs || []).map((s) => everything.find((item) => item.slug === s)).filter(Boolean);
+    return <WandaArticlePage article={article} related={related} />;
   }
 
   const author = article.author;

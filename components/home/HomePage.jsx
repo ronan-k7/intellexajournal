@@ -1,6 +1,6 @@
 // components/home/HomePage.jsx
 import Featured from './Featured';
-import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG, ROSSINI_ARTICLE_SLUG, CEMENT_ARTICLE_SLUG } from '@/lib/client-article';
+import { CLIENT_ARTICLE_SLUG, VANITY_ARTICLE_SLUG, ROSSINI_ARTICLE_SLUG, CEMENT_ARTICLE_SLUG, WANDA_ARTICLE_SLUG } from '@/lib/client-article';
 import LatestVideo from './LatestVideo';
 import LeadNews from './LeadNews';
 import Newsletter from './Newsletter';
@@ -28,8 +28,8 @@ export default function HomePage({ articles }) {
     return picked;
   };
 
-  // Hero slot is pinned to the client story (falls back to the newest article).
-  const hero = articles.find((a) => a.slug === CLIENT_ARTICLE_SLUG) || articles[0];
+  // Hero slot is pinned to the Wanda Vázquez client story (falls back to the newest article).
+  const hero = articles.find((a) => a.slug === WANDA_ARTICLE_SLUG) || articles[0];
   used.add(hero.slug);
   // Second client story is pinned to the 2nd slot of the left column in LeadNews.
   const secondary = articles.find((a) => a.slug === VANITY_ARTICLE_SLUG) || null;
@@ -40,8 +40,11 @@ export default function HomePage({ articles }) {
   // Fourth client story is pinned to the 2nd slot of the bottom row in LeadNews.
   const quaternary = articles.find((a) => a.slug === CEMENT_ARTICLE_SLUG) || null;
   if (quaternary) used.add(quaternary.slug);
+  // The Habba contract-controversy client story is pinned to the 3rd slot of the bottom row in LeadNews.
+  const quinary = articles.find((a) => a.slug === CLIENT_ARTICLE_SLUG) || null;
+  if (quinary) used.add(quinary.slug);
   // Each pinned story takes one slot, so the free slots shrink by one each.
-  const lead = take(articles, 10 - (secondary ? 1 : 0) - (tertiary ? 1 : 0) - (quaternary ? 1 : 0));
+  const lead = take(articles, 10 - (secondary ? 1 : 0) - (tertiary ? 1 : 0) - (quaternary ? 1 : 0) - (quinary ? 1 : 0));
   const video = take(articles.filter((a) => a.video), 4);
   const featured = take(articles.filter((a) => a.featured), 4);
   const world = take(byCategory('world'), 6);
@@ -60,7 +63,7 @@ export default function HomePage({ articles }) {
         <a href="#latest" className="mr-3.5 hidden text-[11px] font-bold sm:inline" style={{ color: ACCENT }}>Follow updates →</a>
       </div> */}
 
-      <LeadNews hero={hero} secondary={secondary} tertiary={tertiary} quaternary={quaternary} articles={lead} />
+      <LeadNews hero={hero} secondary={secondary} tertiary={tertiary} quaternary={quaternary} quinary={quinary} articles={lead} />
       <LatestVideo articles={video} />
 
       <QuoteBanner />
